@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { Open_Sans } from "next/font/google";
+
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export default createGlobalStyle`
   *, 
@@ -17,5 +20,11 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
     padding: 2rem;
+    font-family: ${openSans.style.fontFamily}
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
 `;
